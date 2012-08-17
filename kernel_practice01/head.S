@@ -2,7 +2,7 @@
 @ File: 	head.S
 @ Function: 初始化，包括设置SVC模式下的堆栈，启动第一个任务Task1.
 @ Author: 	Guangwei_Jiang
-@ Date:		2012-0817
+@ Date:		2012-08-17
 @**************************************************************
 
 .global _start
@@ -14,8 +14,9 @@
 @******************************************************************************
 	.align
 start:
+	ldr	lr, =halt_loop		@ 设置lr
 	ldr	sp, =200000			
-	bl 	Task1
+	bl 	Task1				@ 启动第一个任务Task1
 halt_loop:
 	b	halt_loop
 
