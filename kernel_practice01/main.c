@@ -3,7 +3,7 @@
 //		main.c
 //
 // Description:
-//		Task1向console打印信息。
+//		main向console打印信息。
 //
 // Author/Created Date:
 //      Guangwei Jiang, 2012-0817
@@ -32,7 +32,7 @@
 //-----------------------------------------------------------------
 // INTERNAL FUNCTIONS
 //-----------------------------------------------------------------
-void Task1();
+void main();
 
 //-----------------------------------------------------------------
 // EXTERNAL FUNCTIONS
@@ -47,10 +47,10 @@ void Task1();
 
 //----------------------------------------------------------------------------
 // Function:
-//      void Task1()
+//      void main()
 //
 // Description:
-//		Task1向console打印信息。
+//		main向console打印信息。
 //
 // Parameters:
 //      n/a
@@ -58,14 +58,14 @@ void Task1();
 // Return Value:
 //      n/a
 //
-void Task1()
+void main()
 { 
 
-	putstr("Enter Task1\n");	
+	putstr("Enter main\n");	
 		
 	while (1)
 	{
-		putstr("This is task1\n");	
+		putstr("This is main\n");	
 	}
 
 }
