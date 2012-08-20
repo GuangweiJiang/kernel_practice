@@ -65,7 +65,7 @@ void main()
 		
 	while (1)
 	{
-		putstr("This is main\n");	
+		putstr("Hello World!\n");	
 	}
 
 }
