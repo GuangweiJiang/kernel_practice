@@ -1,7 +1,7 @@
 objs := head.o misc.o main.o
 
 kernel_practice.bin: $(objs)
-	arm-eabi-ld -Ttext 0x0010000 -o kernel_practice_elf $^
+	arm-eabi-ld -Ttext 0x00010000 -o kernel_practice_elf $^
 	arm-eabi-objcopy -O binary -S kernel_practice_elf $@
 	arm-eabi-objdump -D -m arm kernel_practice_elf > kernel_practice.dis
 	
