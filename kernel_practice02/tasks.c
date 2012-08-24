@@ -97,6 +97,6 @@ void task_create(void(*Task)(void), unsigned long *p_Stack, unsigned long *Task_
    	*(--p_Stack) = (unsigned long)2;			/* r2  */
    	*(--p_Stack) = (unsigned long)1;			/* r1  */
 	*(--p_Stack) = (unsigned long)0;			/* r0  */
-    *(--p_Stack) = (unsigned long)(SVCMODE);	/* CPSR */
-	*Task_STK_PTR = (unsigned long)p_Stack;  	/* 保存Task栈顶地址*/
+	*(--p_Stack) = (unsigned long)(SVCMODE);	/* CPSR */
+	*Task_STK_PTR = (unsigned long)p_Stack;		/* 保存Task栈顶地址*/
 }
