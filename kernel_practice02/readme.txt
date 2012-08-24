@@ -72,6 +72,11 @@ android模拟器（基于qemu，android模拟器“评估板”的名称为goldf
    #define TASK02_STK_PTR			((unsigned long *)(TASK01_STK_PTR + STK_PTR_SIZE)) 
    移除前面的(unsigned long *)后，问题消失。
    有兴趣的可以琢磨其中的缘由。
+   
+思考题：
+1. 如何再增加第三/第四个任务，并且循环调用？
+2. 程序中最多可以创建多少个任务？限制因素是什么？
+3. 能否改进程序，只需调用函数task_sched（）即可实现不同任务之间的切换。
 
 ****************************************    
 如何build image:
