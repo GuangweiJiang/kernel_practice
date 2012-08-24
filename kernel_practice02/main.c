@@ -6,7 +6,7 @@
 //		main向console打印信息。
 //
 // Author/Created Date:
-//      Guangwei Jiang, 2012-0817
+//      Guangwei Jiang, 2012-08-17
 //
 // Modification History:
 // 
@@ -74,7 +74,6 @@ void main()
 	{
 		putstr("Hello World!\n");	
 		task_sched_main_to_01();
-		//task_sched_01_to_02();
 	}
 
 }
