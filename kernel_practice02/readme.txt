@@ -66,10 +66,10 @@ android模拟器（基于qemu，android模拟器“评估板”的名称为goldf
    TASK01_STK_PTR不是期望中的0x00100004, 而是0x00100010;
    TASK02_STK_PTR不是期望中的0x00100008, 而是0x00100020;
    造成任务创建失败。
-   #define STK_PTR_SIZE				0x4		
-   #define TASK_MAIN_STK_PTR		((unsigned long *)0x00100000)
-   #define TASK01_STK_PTR			((unsigned long *)(TASK_MAIN_STK_PTR + STK_PTR_SIZE))
-   #define TASK02_STK_PTR			((unsigned long *)(TASK01_STK_PTR + STK_PTR_SIZE)) 
+   #define STK_PTR_SIZE      0x4		
+   #define TASK_MAIN_STK_PTR ((unsigned long *)0x00100000)
+   #define TASK01_STK_PTR    ((unsigned long *)(TASK_MAIN_STK_PTR + STK_PTR_SIZE))
+   #define TASK02_STK_PTR    ((unsigned long *)(TASK01_STK_PTR + STK_PTR_SIZE)) 
    移除前面的(unsigned long *)后，问题消失。
    有兴趣的可以琢磨其中的缘由。
    
